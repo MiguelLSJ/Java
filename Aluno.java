@@ -1,40 +1,31 @@
-package Lista02;
-
+package ATV_avaliativa_1;
 import java.util.Scanner;
 
 public class Aluno {
-    String nome;
-    float nt1, nt2;
-    Scanner le = new Scanner(System.in);
+    private String nome, matricula;
+    private double nota;
 
-    float calcM () {
-        float total = (nt1 + nt2) / 2;
-        return total;
+    public String getNome () {
+        return nome;
     }
 
-    void verApro () {
-        if (calcM() >= 7) {
-            System.out.format("O aluno %s foi aprovado com média final: %.1f\n", nome, calcM());
-        } else {
-            System.out.format("O aluno %s foi reprovado com média final: %.1f\n", nome, calcM());
-        }
+    public void setNome (String name) {
+        this.nome = name;
     }
 
-    void quest () {
-        System.out.print("Digite o nome do aluno\n---> ");
-        nome = le.next ();
-        System.out.print("Digite a 1ª nota\n--> ");
-        nt1 = le.nextFloat ();
-        System.out.print("Digite a 2ª nota\n--> ");
-        nt2 = le.nextFloat ();
-
-        verApro();
+    public String getMatricula () {
+        return matricula;
     }
 
-    public static void main (String[] args) {
+    public void setMatricula (String matr) {
+        this.matricula = matr;
+    }
 
-        Aluno criatura = new Aluno();
+    public double getNota () {
+        return nota;
+    }
 
-        criatura.quest();
-    } // Lista 2 exe 10
+    public void setNota (double nata) {
+        this.nota = nata;
+    }
 }
